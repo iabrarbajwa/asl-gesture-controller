@@ -148,10 +148,6 @@ FPS varies with model choice, hand detection load, and system resources. MobileN
 - Publish model weights as GitHub Releases or Hugging Face artifacts
 - Add Grad-CAM / saliency maps for interpretability
 
-## License
-
-Academic project — contact the author for reuse permissions.
-
 ## Author
 
 Course project — Advanced Computational Techniques for Big Imaging and Signal Data.
