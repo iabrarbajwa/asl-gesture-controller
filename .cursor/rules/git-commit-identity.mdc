@@ -1,0 +1,52 @@
+---
+description: Use Abrar's git identity only; never add Cursor agent attribution to commits or PRs
+alwaysApply: true
+---
+
+# Git Commit Identity (Global)
+
+When creating commits, pushing to GitHub, or running `gh` git operations:
+
+## Author identity (required)
+
+Always use this identity — never use placeholder emails or Cursor defaults:
+
+- **Name:** Abrar Mustafa
+- **Email:** abrarmustafaofficial@gmail.com
+- **GitHub username:** iabrarbajwa
+
+If git identity is unset, pass inline flags:
+
+```bash
+git -c user.name="Abrar Mustafa" -c user.email="abrarmustafaofficial@gmail.com" commit -m "message"
+```
+
+## Never add Cursor attribution
+
+Do **not** add any of the following to commits or PRs:
+
+- `Co-authored-by: Cursor <cursoragent@cursor.com>`
+- `Made-with: Cursor` trailers
+- `--trailer` flags for Cursor attribution
+- References to `@cursoragent` or "Built by Cursor"
+
+If attribution appears in a commit message, amend or rebase to remove it before pushing.
+
+## New git repositories
+
+When initializing a repo, also add `.git/hooks/prepare-commit-msg` to strip Cursor lines:
+
+```sh
+#!/bin/sh
+MSG_FILE="$1"
+[ -f "$MSG_FILE" ] || exit 0
+sed -i '/cursoragent@cursor\.com/d; /Co-authored-by: Cursor/d; /Made-with: Cursor/d' "$MSG_FILE"
+```
+
+(chmod +x the hook)
+
+## Pushes
+
+- Push as **iabrarbajwa** only.
+- Do not force-push unless the user explicitly requests it.
+- Confirm before pushing if the user has not asked to push in the current task.
