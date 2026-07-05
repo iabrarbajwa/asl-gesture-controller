@@ -43,8 +43,9 @@ ICT/
 │   ├── basic_cnn.ipynb
 │   ├── tranfer_learning_MobileNet_model.ipynb
 │   └── transfer_learning_EfficientNet_model.ipynb
-├── models/                 # Trained weights (not in repo — see below)
-├── dataset/                # Training images (not in repo — see below)
+├── models/                 # Trained Keras weights
+├── dataset/                # ASL training images (A–Y)
+├── presentation/           # Project presentation PDFs
 └── streamlit_fps_results.txt
 ```
 
@@ -81,13 +82,7 @@ pip install -r requirements.txt
 
 ### Model Weights & Dataset
 
-Trained model files and the image dataset are **not included** in this repository due to size. To run the full application locally:
-
-1. Train models using the notebooks in `training/` (place images under `dataset/<LETTER>/`), **or**
-2. Place pre-trained weights in `models/`:
-   - `basic_cnn_weights.keras`
-   - `transfer_mobilenet_sign_model.keras`
-   - `efficientnetb0_sign_model.keras`
+The repository includes the full `dataset/` folder, trained model weights in `models/`, and the MediaPipe `hand_landmarker.task` file. Clone the repo and install dependencies to run locally.
 
 ## Usage
 
