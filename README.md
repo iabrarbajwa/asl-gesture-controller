@@ -59,7 +59,7 @@ ICT/
 ### Setup
 
 ```bash
-git clone https://github.com/YOUR_USERNAME/asl-gesture-controller.git
+git clone https://github.com/iabrarbajwa/asl-gesture-controller.git
 cd asl-gesture-controller
 
 python -m venv signEnv
