@@ -45,7 +45,6 @@ ICT/
 │   └── transfer_learning_EfficientNet_model.ipynb
 ├── models/                 # Trained Keras weights
 ├── dataset/                # ASL training images (A–Y)
-├── presentation/           # Project presentation PDFs
 └── streamlit_fps_results.txt
 ```
 
