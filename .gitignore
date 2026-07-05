@@ -1,0 +1,71 @@
+# --- Python ---
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+*.egg-info/
+dist/
+build/
+*.egg
+
+# --- Virtual environments ---
+venv/
+.venv/
+env/
+signEnv/
+ENV/
+
+# --- Secrets & credentials ---
+.env
+.env.*
+*.env
+kaggle.json
+*.pem
+*.key
+secrets/
+credentials.json
+
+# --- IDE & tooling ---
+.idea/
+.vscode/
+*.swp
+*.swo
+.cursor/
+.agents/
+tmp/
+
+# --- OS ---
+Thumbs.db
+Desktop.ini
+.DS_Store
+
+# --- Datasets (not uploaded) ---
+dataset/
+
+# --- Model weights & large binaries ---
+models/
+*.keras
+*.h5
+*.pt
+*.pth
+*.onnx
+*.task
+hand_landmarker.task
+
+# --- Jupyter ---
+.ipynb_checkpoints/
+
+# --- Logs & caches ---
+*.log
+.cache/
+.mypy_cache/
+.pytest_cache/
+
+# --- Personal / private documents ---
+presentation/
+*.pptx
+*verification*
+*contract*
+*Wise*
+*Revolut*
